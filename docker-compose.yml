@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  transmission:
+    build: transmission
+    image: sensorhome.tk:5000/transmission
+    ports:
+      - 9091:9091
