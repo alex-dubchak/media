@@ -1,0 +1,7 @@
+version: '3.4'
+
+services:
+  transmission:
+    volumes:
+      - '/home/media/share:/downloads'
+      - '/home/media/share/torrents:/torrents'
