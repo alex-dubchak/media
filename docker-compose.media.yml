@@ -5,3 +5,10 @@ services:
     volumes:
       - '/home/media/share:/downloads'
       - '/home/media/share/torrents:/torrents'
+  gerbera:
+    volumes:
+      - 'gerbera:/var/lib/gerbera'
+      - '/home/media/share:/media'
+
+volumes:
+  gerbera:

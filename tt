@@ -1,0 +1,21 @@
+openssl req \
+  -newkey rsa:4096 -nodes -sha256 -keyout certs/domain.key \
+  -x509 -days 365 -out certs/domain.crt -subj /CN=sensorhome.tk
+
+
+
+sudo  docker run -d \
+  --restart=always \
+  --name registry \
+  -v `pwd`/certs:/certs \
+  -e REGISTRY_HTTP_ADDR=0.0.0.0:5000 \
+  -e REGISTRY_HTTP_TLS_CERTIFICATE=/certs/domain.crt \
+  -e REGISTRY_HTTP_TLS_KEY=/certs/domain.key \
+  -p 5000:5000 \
+  registry:2
+
+
+
+  docker run --rm -it fe35e66a7d10 bash -il
+
+  

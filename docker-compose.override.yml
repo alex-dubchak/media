@@ -1,0 +1,10 @@
+version: '3.4'
+
+services:
+#   transmission:
+#     volumes:
+#       - 'D:\Temp\media:/downloads'
+#       - 'D:\Temp\media\torrents:/torrents'
+  gerbera:
+    volumes:
+      - 'D:\Temp\media:/media'
