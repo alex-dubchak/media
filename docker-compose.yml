@@ -1,6 +1,9 @@
 version: '3.4'
 
 services:
+  buildmachine:
+    build: buildmachine
+    image: sensorhome.tk:5000/buildmachine
   transmission:
     build: transmission
     image: sensorhome.tk:5000/transmission
