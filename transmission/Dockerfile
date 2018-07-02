@@ -1,4 +1,4 @@
-FROM buildmachine as BUILD
+FROM media_buildmachine as BUILD
 
 RUN mkdir /build
 WORKDIR /build
