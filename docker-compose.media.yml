@@ -10,7 +10,7 @@ services:
     volumes:
       - 'gerbera:/var/lib/gerbera'
       - '/home/media/share:/media'
-#      - './gerbera/:/etc/gerbera/'
+      - './gerbera/:/etc/gerbera/'
 
 volumes:
   gerbera:
