@@ -14,6 +14,7 @@
     <home>/var/lib/gerbera</home>
     <webroot>/usr/share/gerbera/web</webroot>
     <presentationURL>http://localhost:9010/index.html</presentationURL>
+    <pc-directory upnp-hide="yes"/>
     <storage caching="yes">
       <sqlite3 enabled="yes">
         <database-file>gerbera.db</database-file>
@@ -42,7 +43,7 @@
       <add header="contentFeatures.dlna.org: DLNA.ORG_OP=01;DLNA.ORG_CI=0;DLNA.ORG_FLAGS=01500000000000000000000000000000"/>
     </custom-http-headers>
     <extended-runtime-options>
-      <ffmpegthumbnailer enabled="no">
+      <ffmpegthumbnailer enabled="yes">
         <thumbnail-size>128</thumbnail-size>
         <seek-percentage>5</seek-percentage>
         <filmstrip-overlay>yes</filmstrip-overlay>
@@ -123,7 +124,7 @@
       <AppleTrailers enabled="no" refresh="43200" update-at-start="no" resolution="640"/>
     </online-content>
     <autoscan use-inotify="auto">
-      <directory location="/media" mode="timed" interval="300" level="full" recursive="yes" hidden-files="no"/>
+      <directory location="/media" mode="timed" interval="120" level="full" recursive="yes" hidden-files="no"/>
     </autoscan>
   </import>
   <transcoding enabled="yes">

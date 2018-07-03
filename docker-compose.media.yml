@@ -5,6 +5,7 @@ services:
     volumes:
       - '/home/media/share:/downloads'
       - '/home/media/share/torrents:/torrents'
+      - 'transmission:/root/.config/transmission-daemon/'
   gerbera:
     volumes:
       - 'gerbera:/var/lib/gerbera'
@@ -12,3 +13,4 @@ services:
 
 volumes:
   gerbera:
+  transmission:
