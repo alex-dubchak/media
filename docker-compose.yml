@@ -11,7 +11,7 @@ services:
       - 9091:9091
   gerbera:
     build: gerbera
-    image: sensorhome.tk:5000/gerbera
+    image: sensorhome.tk:5000/gerbera:0.0.1
     network_mode: "host"
     ports:
       - 49152:49152
