@@ -1,4 +1,4 @@
-FROM media_buildmachine as BUILD
+FROM sensorhome.tk:5000/buildmachine as BUILD
 
 RUN mkdir /build
 WORKDIR /build

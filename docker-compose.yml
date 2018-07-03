@@ -2,15 +2,15 @@ version: '3.4'
 
 services:
   buildmachine:
-    build: buildmachine
+#    build: buildmachine
     image: sensorhome.tk:5000/buildmachine
   transmission:
-    build: transmission
+#    build: transmission
     image: sensorhome.tk:5000/transmission
     ports:
       - 9091:9091
   gerbera:
-    build: gerbera
+#    build: gerbera
     image: sensorhome.tk:5000/gerbera:0.0.1
     network_mode: "host"
     ports:
