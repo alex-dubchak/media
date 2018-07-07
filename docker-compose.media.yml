@@ -6,11 +6,16 @@ services:
       - '/home/media/share:/downloads'
       - '/home/media/share/torrents:/torrents'
       - 'transmission:/root/.config/transmission-daemon/'
-  gerbera:
+  minidlna:
     volumes:
-      - 'gerbera:/var/lib/gerbera'
-      - '/home/media/share:/media'
-      - './gerbera/:/etc/gerbera/'
+      - '/home/media/share/movies/:/media'
+      - './minidlna/:/minidlna/'
+
+#  gerbera:
+#    volumes:
+#      - 'gerbera:/var/lib/gerbera'
+#      - '/home/media/share:/media'
+#      - './gerbera/:/etc/gerbera/'
 
 volumes:
   gerbera:

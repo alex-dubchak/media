@@ -9,10 +9,19 @@ services:
     image: sensorhome.tk:5000/transmission
     ports:
       - 9091:9091
-  gerbera:
-#    build: gerbera
-    image: sensorhome.tk:5000/gerbera:0.0.2
+  minidlna:
+    build: minidlna
+    image: sensorhome.tk:5000/minidlna:0.0.0
     network_mode: "host"
     ports:
       - 49152:49152
       - 1900:1900/udp
+      - 8200:8200
+
+#  gerbera:
+#    build: gerbera
+#    image: sensorhome.tk:5000/gerbera:0.0.2
+#    network_mode: "host"
+#    ports:
+#      - 49152:49152
+#      - 1900:1900/udp

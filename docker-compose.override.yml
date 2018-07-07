@@ -5,6 +5,10 @@ services:
 #     volumes:
 #       - 'D:\Temp\media:/downloads'
 #       - 'D:\Temp\media\torrents:/torrents'
-  gerbera:
+  minidlna:
     volumes:
       - 'D:\Temp\media:/media'
+      - '.\minidlna:/minidlna'
+#  gerbera:
+#    volumes:
+#      - 'D:\Temp\media:/media'
